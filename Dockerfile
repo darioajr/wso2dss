@@ -9,7 +9,7 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2dss-3.2.2.z
     apt-get install -y zip && \
     apt-get clean && \
     unzip /opt/wso2dss-3.2.2.zip -d /opt && \
-    rm /opt/wso2dss-3.2.2.zip
+    rm /opt/wso2dss-3.2.2.zip && \
     wget -P /opt http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.30.tar.gz && \
     tar -xvzf /opt/mysql-connector-java-5.1.30.tar.gz && \
     mv /opt/mysql-connector-java-5.1.30/mysql-connector-java-5.1.30-bin.jar /opt/wso2dss-3.2.2/lib/mysql-connector-java-5.1.30-bin.jar && \
