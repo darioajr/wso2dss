@@ -12,16 +12,14 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2dss-3.2.2.z
     rm /opt/wso2dss-3.2.2.zip && \
     wget -P /opt http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.30.tar.gz && \
     tar -xvzf /opt/mysql-connector-java-5.1.30.tar.gz -C /opt && \
-    mv /opt/mysql-connector-java-5.1.30/mysql-connector-java-5.1.30-bin.jar /opt/wso2dss-3.2.2/lib/mysql-connector-java-5.1.30-bin.jar && \
+    mv /opt/mysql-connector-java-5.1.30/mysql-connector-java-5.1.30-bin.jar /opt/wso2dss-3.2.2/repository/components/extensions/mysql-connector-java-5.1.30-bin.jar && \
     rm -rf /opt/mysql-connector-java-5.1.30 && \
     rm /opt/mysql-connector-java-5.1.30.tar.gz && \
     wget -P /opt/ http://www.java2s.com/Code/JarDownload/ojdbc6/ojdbc6.jar.zip && \
     unzip /opt/ojdbc6.jar.zip -d /opt && \
-    mv /opt/ojdbc6.jar /opt/wso2dss-3.2.2/lib/ojdbc6.jar && \
+    mv /opt/ojdbc6.jar /opt/wso2dss-3.2.2/repository/components/extensions/ojdbc6.jar && \
     rm /opt/ojdbc6.jar.zip
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 EXPOSE 9443
 CMD ["/opt/wso2dss-3.2.2/bin/wso2server.sh"]
-
-
