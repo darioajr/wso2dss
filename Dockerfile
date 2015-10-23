@@ -18,8 +18,8 @@ RUN wget -P /opt http://dist.wso2.org/maven2/org/wso2/dss/wso2dss/3.2.2/wso2dss-
     wget -P /opt/ http://www.java2s.com/Code/JarDownload/ojdbc6/ojdbc6.jar.zip && \
     unzip /opt/ojdbc6.jar.zip -d /opt && \
     mv /opt/ojdbc6.jar /opt/wso2dss-3.2.2/lib/ojdbc6.jar && \
-    rm -f /opt/ojdbc6.jar.zip
-    
+    rm /opt/ojdbc6.jar.zip
+
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 EXPOSE 9443
 CMD ["/opt/wso2dss-3.2.2/bin/wso2server.sh"]
