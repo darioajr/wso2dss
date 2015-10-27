@@ -21,5 +21,5 @@ RUN wget -P /opt https://s3-us-west-2.amazonaws.com/wso2-stratos/wso2dss-3.2.2.z
     rm /opt/ojdbc6.jar.zip
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
-EXPOSE 9443
+EXPOSE 9443 9763
 CMD ["/opt/wso2dss-3.2.2/bin/wso2server.sh"]
