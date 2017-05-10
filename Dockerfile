@@ -1,5 +1,5 @@
 #
-# WSO2 DSS 3.2.2
+# WSO2 DSS 3.5.1
 #
 FROM java:8
 MAINTAINER Dario Alves Junior, darioajr@gmail.com
